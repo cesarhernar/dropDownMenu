@@ -1,29 +1,23 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import Children from './../components/Children'
-import * as actions from './../actions/todoActions';
+import Children from './../components/Children';
 
 let Category = ({name, children, id}) => {
     return (
-      <div>
-      <Children id={child.id} name={child.name} children={child.children} />
+      <div className="container">
+        <ul>
+          <Children key={id} name={name} children={children} />
+        </ul>
       </div>
     );
   }
 
 let mapStateToProps = (state) => {
-  return { tasks: state.todo.tasks };
+  return state.category;
 };
 
 let mapDispatchToProps = (dispatch) => {
-  return {
-    submit: (action) => {
-      dispatch(actions.addTaskActionCreator(action));
-    },
-    finished: (action) => { 
-      dispatch(actions.markTaskActionCreator(action));
-    } 
-  };
+  return {};
 };
 
 Category = connect(mapStateToProps, mapDispatchToProps)(Category);

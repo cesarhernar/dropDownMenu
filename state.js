@@ -1,4 +1,4 @@
-let intialState = {
+let initialState = {
  "category": {
    "id": 1,
    "name": "Bedroom",

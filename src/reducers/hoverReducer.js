@@ -1,5 +1,4 @@
 import initialState from './../../state';
-
 function hoverReduce(state = initialState, action) {
   switch (action.type) {
     default:
