@@ -16,12 +16,12 @@ let Children = ({name, id, children}) => {
    }
   
   return (
-    <li className="container">
+    <li>
       <div className="linkContainer">
         <a href="#" className="Title" onClick={displayName}> {name}  <span>></span></a>
       </div>
       <div className="Child">
-        <ul> 
+        <ul>
           {children}
         </ul>
      </div>

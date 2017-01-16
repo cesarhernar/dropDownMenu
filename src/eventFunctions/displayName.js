@@ -1,7 +1,7 @@
 export default function displayName(e) {
   let div = e.target.parentElement;
   if (div.nextSibling) {
-    div.nextSibling.classList.contains("Child") ? show(div) : hide(div);
+    div.nextSibling.classList.contains("Child") ? show(div) : hide(div.parentElement);
   }
 }
 
@@ -9,13 +9,16 @@ function show(div) {
    for (let i = div.nextSibling; i !== null; i = i.nextSibling) {
     i.classList.remove("Child");
     i.classList.add("Padded");
+    i.firstElementChild.firstElementChild.firstElementChild.classList.add("top");
+    i.firstElementChild.lastElementChild.firstElementChild.classList.add("bottom");
   } 
 }
 
 function hide(div) {
-  Array.prototype.forEach.call(div.parentElement.getElementsByClassName("Padded"), (elem) => {
+  let hideList = [];
+  Array.prototype.forEach.call(div.getElementsByClassName("Padded"), (elem) => hideList.push(elem));
+  hideList.reverse().forEach(elem => {
     elem.classList.remove("Padded");
     elem.classList.add("Child");
-    hide(elem);
-  });
+  })
 }
