@@ -2,14 +2,14 @@ import React from 'react';
 import displayName from './../eventFunctions/displayName';
 
 
-let Children = ({name, id, children}) => {
+let Children = ({name, id, children, clss}) => {
   if (children) {
     children = children.map(child => <Children key={child.id} name={child.name} children={child.children} />);
   } else {
     return (
       <li>
-        <div className="linkContainer">
-          <a href="#" className="Title" onClick={displayName}> {name} </a>
+        <div className={clss || "linkContainer"}>
+          <a href="#" className="Title"> {name} </a>
         </div>
       </li>
     );
@@ -17,7 +17,7 @@ let Children = ({name, id, children}) => {
   
   return (
     <li>
-      <div className="linkContainer">
+      <div className={clss || "linkContainer"}>
         <a href="#" className="Title" onClick={displayName}> {name}  <span>></span></a>
       </div>
       <div className="Child">

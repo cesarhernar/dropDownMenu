@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import Category from './Category';
 
 class App extends Component {
-  constructor(props) { 
+  constructor(props) {
     super(props);
   }
   render() {

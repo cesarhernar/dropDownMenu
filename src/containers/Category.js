@@ -1,12 +1,11 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import Children from './../components/Children';
-
 let Category = ({name, children, id}) => {
     return (
-      <div className="container">
+      <div>
         <ul>
-          <Children key={id} name={name} children={children} />
+          <Children key={id} name={name} children={children} clss={"linkContainerSingle"}/>
         </ul>
       </div>
     );
