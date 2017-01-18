@@ -18,7 +18,7 @@ function show(div) {
 function hide(div) {
   let hideList = [];
   Array.prototype.forEach.call(div.getElementsByClassName("Padded"), (elem) => hideList.push(elem));
-  hideList.reverse().forEach(elem => {
+  hideList.forEach(elem => {
     elem.classList.remove("Padded");
     elem.classList.add("Child");
   })
