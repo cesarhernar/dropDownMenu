@@ -23,3 +23,8 @@ run server
 ```
 npm start
 ```
+
+open the browser to 
+```
+localhost:9090
+```
