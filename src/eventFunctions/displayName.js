@@ -6,6 +6,7 @@ export default function displayName(e) {
 }
 
 function show(div) {
+  hide(div.parentElement.parentElement);
    for (let i = div.nextSibling; i !== null; i = i.nextSibling) {
     i.classList.remove("Child");
     i.classList.add("Padded");
@@ -15,6 +16,7 @@ function show(div) {
 }
 
 function hide(div) {
+  console.log('runinng in show?')
   let hideList = [];
   Array.prototype.forEach.call(div.getElementsByClassName("Padded"), (elem) => hideList.push(elem));
   hideList.reverse().forEach(elem => {

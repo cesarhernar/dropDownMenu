@@ -59,6 +59,9 @@ a:hover {
 span{
   position: absolute;
   right: 8px;
+  font-size: 10px;
+  top: 20%;
+ 
 }
 .Child {
   display: none;
@@ -99,7 +102,7 @@ span{
   height: 40px;
   border: 0.2px solid #ccc;
   border-radius: 2px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container{
