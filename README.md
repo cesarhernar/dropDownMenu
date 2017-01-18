@@ -24,7 +24,7 @@ run server
 npm start
 ```
 
-open the browser to 
+open browser to 
 ```
 localhost:9090
 ```

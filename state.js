@@ -5,7 +5,23 @@ let initialState = {
    "children": [
      {
        "id": 2,
-       "name": "Mattress"
+       "name": "Mattress",
+       "children": [
+         {
+       "id": 3,
+       "name": "Headboards",
+       "children": [
+         {
+           "id": 4,
+           "name": "Metallic Headboards"
+         },
+         {
+           "id": 5,
+           "name": "Wooden Headboards"
+         }
+       ]
+     }
+       ]
      },
      {
        "id": 3,
