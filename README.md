@@ -6,7 +6,6 @@ to run the app locally:
 install packages
 ```
 npm install
-
 ```
 
 bundle with webpack
