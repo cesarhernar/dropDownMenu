@@ -18,7 +18,7 @@ let Children = ({name, id, children, clss}) => {
   return (
     <li>
       <div className={clss || "linkContainer"}>
-        <a href="#" className="Title" onClick={displayName}> {name}  <span>></span></a>
+        <a href="#" className="Title" onClick={displayName}> {name} <span className="span">></span></a>
       </div>
       <div className="Child">
         <ul>

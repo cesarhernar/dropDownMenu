@@ -78,6 +78,7 @@ span{
   display: inline-block;
   padding-top: 3px;
   position: relative;
+  text-indent: 0.5em;
 }
 
 .linkContainer{

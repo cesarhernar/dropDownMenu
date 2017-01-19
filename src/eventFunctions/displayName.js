@@ -1,5 +1,8 @@
 export default function displayName(e) {
   let div = e.target.parentElement;
+ 
+  if (div.classList.contains('Title')) div = div.parentElement;
+  
   if (div.nextSibling) {
     div.nextSibling.classList.contains("Child") ? show(div) : hide(div.parentElement);
   }
